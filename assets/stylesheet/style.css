@@ -11,7 +11,7 @@
   width: 100%;
   padding: 8px;
   border: none;
-  box-shadow: 0 0 11px #blue;
+  box-shadow: 0 0 11px ##333;
 }
 .navbar-nav a{
   font-size: 1.4em;
