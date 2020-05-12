@@ -9,9 +9,9 @@
 
 .navbar{
   width: 100%;
-  padding: 8px;
+  padding: 25px;
   border: none;
-  box-shadow: 0 0 11px ##333;
+  box-shadow: 0 0 11px #333;
 }
 .navbar-nav a{
   font-size: 1.4em;
