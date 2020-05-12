@@ -9,12 +9,12 @@
 
 .navbar{
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   border: none;
   box-shadow: 0 0 11px #333;
 }
 .navbar-nav a{
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: bold;
   color:white;
 }
