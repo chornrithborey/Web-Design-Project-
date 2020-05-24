@@ -1,126 +1,174 @@
-*{
-  outline: none;
-  padding: none;
-  margin: none;
-}
-.navbar{
-	background-color:#2042b2;
+:root {
+  --NIPTICT-blue: #203EB9;
+  --NIPTICT-red: #EF0016;
+  --darker-red: #AD0111;
 }
 
-.navbar{
-  width: 100%;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.btn-text {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+.btn-text .chevron {
+  padding-left: 5px;
+  vertical-align: middle;
+  color: #FFF;
+}
+
+/* * Navbar */
+
+/* * Main Header */
+
+/* * News and Insights Section */
+.news-insights {
+  background-color: var(--darker-red);
+}
+
+.news-insights>h2 {
+  padding-top: 1em;
+  color: #FFF;
+  font-weight: 300;
+  text-align: center;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
   padding: 20px;
-  border: none;
-  box-shadow: 0 0 11px #333;
-}
-.navbar-nav a{
-  font-size: 1.5em;
-  font-weight: bold;
-  color:white;
-}
-.navbar-brand img{
-  margin-top: -10px;
- 
+  grid-gap: 1em;
+  grid-template-areas:
+      "main secondary";
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.navbar .btn{
+.news-container-single-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.news-item {
+  background-color: #FFF;
+  transition: ease .2s;
+  color: #000;
+  text-decoration: none;
+}
+
+.news-item:hover {
+  transform: scale(1.02);
+  outline: 2px solid #FFF;
+}
+
+.news-item-main {
+  grid-area: main;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "image info"
+}
+
+.news-item-secondary {
+  grid-area: secondary;
+
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+      "image"
+      "info";
+}
+
+.news-img-container {
+  grid-area: image;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-info {
+  grid-area: info;
+  padding: 1em;
   display: flex;
-  align-items: flex-end;
-  margin-left: 180px;
+  flex-wrap: wrap;
 }
-.intro-section{
-  width: 100%;
-  height: 260px;
-  margin-top: -20px;
-  padding: 5px;
-  background-color: rgba(232, 232, 232, 0.5);
+
+.chevron {
+  color: var(--NIPTICT-red);
+  align-self: flex-end;
+  margin-left: auto;
 }
-.intro-section h1{
-  width: 35%;
-  margin-left: 50px;
-  font-weight: normal;
-  font-family:khmer os system;
+
+/* * Article Page */
+.article-container {
+  padding: 1em 2em 4em;
+  max-width: 760px;
+  margin: 0 auto;
 }
-.intro-section button{
-  margin-left: 50px;
-  font-size: 2.5em;
-  background-color:#dc2228; 
+
+article h1 {
+  font-size: 3em;
+  font-weight: 300;
 }
-.form-section{
-  width: 100%;
-  padding: 20px;
-  background-color:#2042b2;
-}
-.form-section p{
+
+article h2 {
   font-size: 2em;
-  color: White;
-  margin-left: 30px;
 }
-.form-section input{
-  margin-left: 30px;
-  border: none;
-  font-size: 2.2em;
-  padding: 4px;
-  width: 60%;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+
+article h3 {
+  font-size: 1.7em;
 }
-.form-section .btn{
-  padding: 10px;
-  padding-left: 15px;
-  border-left: none;
+
+article h4 {
+  font-size: 1.5em;
+}
+
+figure {
+  margin: 2em 0;
+}
+
+figure figcaption {
   color: #222;
-  background-color: #fff;
-  font-size: 1.5em;
-  margin-top: -14px;
-  margin-left: -5px;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+  font-size: 0.95em;
+  text-align: center;
+  padding-top: 0.5em;
 }
- .form-section .btn:hover{
-  transition: all 0.4s linear;
-  background-color: #2042b2; 
-  color: #fff;
-}
-.courses-section{
-  width: 100%;
-  padding-left: 50px;
-}
-.courses-section .row .card{
-  width:30%;
-  background-color: #fff;
-  box-shadow: 1px 2px 5px #444;
-  border-radius: 6px;
-  margin: 10px;
-  font-size: 1.6em;
-  padding: 20px;
-  color: #2042b2; 
-  font-weight: bold;
-}
-.courses-section .btn{
-  padding: 10px;
-  font-size: 1.5em;
-  background-color: #2042b2;  
-  color: white;
-}
-.courses-section .btn:hover{
-  transition: all 0.4s linear;
-  background-color: #dc2228;
-  color: blue;
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
-.courses-section .btn:active{
-  transform: translateY(8px);
-}
-.footer{
-  padding-left: 50px;
-}
-.footer .row{
-  padding: 10px;
-  margin-top: 30px;
-  border: none;
-  border-top: 2px solid rgba(128, 128, 128, 0.6);
-}
-.footer .row li{
-  border-right: 1px solid rgba(128, 128, 128, 0.6);
+
+/* * Footer */
+
+/* * Mobile Screen Sizes */
+@media only screen and (max-width: 576px) {
+
+  /* * News and Insights Section */
+  .news-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr .5fr;
+      grid-template-areas:
+          "main"
+          "secondary";
+  }
+
+  .news-item-main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr .8fr;
+      grid-template-areas:
+          "image"
+          "info";
+  }
 }
